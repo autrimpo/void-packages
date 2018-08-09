@@ -1,6 +1,6 @@
 # Template file for 'python-ruamel.yaml'
 pkgname=python-ruamel.yaml
-version=0.15.41
+version=0.15.51
 revision=1
 wrksrc="ruamel.yaml-${version}"
 build_style=python-module
@@ -11,9 +11,9 @@ short_desc="YAML parser/emitter in Python2"
 maintainer="Orphaned <orphan@voidlinux.eu>"
 license="MIT"
 homepage="https://bitbucket.org/ruamel/yaml"
-changelog="https://pypi.org/project/ruamel.yaml/"
+changelog="https://bitbucket.org/ruamel/yaml/raw/default/CHANGES"
 distfiles="${PYPI_SITE}/r/ruamel.yaml/ruamel.yaml-${version}.tar.gz"
-checksum=4576b346e86deeebb80eb1b89753f805d9781cfe6111ba4d268f45d2693c8270
+checksum=97eff81b23c73a2ea182c04a71e2aa939f3ca493b9b21e4ccbf52eeb000a3a46
 
 post_install() {
 	vlicense LICENSE

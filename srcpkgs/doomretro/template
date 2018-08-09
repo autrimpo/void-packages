@@ -1,0 +1,13 @@
+# Template file for 'doomretro'
+pkgname=doomretro
+version=2.7.1
+revision=1
+build_style=cmake
+hostmakedepends="pkg-config"
+makedepends="SDL2_image-devel SDL2_mixer-devel"
+short_desc="The classic, refined DOOM source port"
+maintainer="cr6git <quark6@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://www.doomretro.com"
+distfiles="https://github.com/bradharding/doomretro/archive/v${version}.tar.gz"
+checksum=f70183d509b2a052f3fbdccf4618473c61066c284728f858af9d6866e40fe58c

@@ -1,6 +1,6 @@
 # Template file for 'plasma-framework'
 pkgname=plasma-framework
-version=5.43.0
+version=5.48.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -10,14 +10,14 @@ makedepends="kactivities5-devel kdeclarative-devel kdoctools-devel kwayland-deve
 depends="qt5-quickcontrols qt5-graphicaleffects qt5-multimedia"
 short_desc="Foundational libraries, components, and tools of the Plasma workspaces"
 maintainer="Denis Revin <denis.revin@gmail.com>"
-license="LGPL-2"
+license="LGPL-2.1-or-later"
 homepage="https://projects.kde.org/projects/frameworks/plasma-framework"
-distfiles="http://download.kde.org/stable/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=c6108fd4d2cf516cbb97c77c2c58f136b670afc01a7f49face60812f4156eeec
+distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=02c1c73265db705b0cd360c5a9c493340717babcd92d51ff0202d78976c081c2
 
-if [ -n "$CROSS_BUILD" ]; then
-	hostmakedepends+=" qt5-host-tools qt5-qmake python"
-	broken="cmake fails on links to target Qt5::Gui_GLESv2"
+if [ "$CROSS_BUILD" ]; then
+	configure_args=" -DDESKTOPTOJSON_EXECUTABLE=/usr/bin/desktoptojson"
+	hostmakedepends+=" kconfig kcoreaddons kdoctools python qt5-host-tools qt5-qmake"
 fi
 
 plasma-framework-devel_package() {
@@ -26,6 +26,6 @@ plasma-framework-devel_package() {
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/cmake
-		vmove usr/lib/*.so
+		vmove "usr/lib/*.so"
 	}
 }

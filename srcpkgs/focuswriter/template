@@ -1,6 +1,6 @@
 # Template file for 'focuswriter'
 pkgname=focuswriter
-version=1.6.13
+version=1.6.15
 revision=1
 build_style=qmake
 hostmakedepends="pkg-config"
@@ -10,7 +10,7 @@ maintainer="cr6git <quark6@protonmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://gottcode.org/focuswriter/"
 distfiles="https://github.com/gottcode/focuswriter/archive/v${version}.tar.gz"
-checksum=92de4fed0787de0f96131b7f9fd31df519217d8e942f31086a6c3fb9621771da
+checksum=167be0b4e58b4015f74c50d5cc0362cd286fd21fb972d8f74de7c683ae5cb381
 
 if [ -n "$CROSS_BUILD" ]; then
 	hostmakedepends+=" qt5-multimedia-devel"

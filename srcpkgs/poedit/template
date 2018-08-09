@@ -1,6 +1,6 @@
 # Template file for 'poedit'
 pkgname=poedit
-version=2.0.8
+version=2.1.1
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
@@ -12,7 +12,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="MIT"
 homepage="https://www.poedit.net/"
 distfiles="https://github.com/vslavik/poedit/releases/download/v${version}-oss/poedit-${version}.tar.gz"
-checksum=01a12bc28477922e77995350e1f3677701bfbc848af9efcfbd35fbd37c7501c2
+checksum=6c4639b8e56b6cffd52afc33d9ddf51b6ce2c6ffdf4f4edff8bb3e4c1a343101
 
 CPPFLAGS="-DUCHAR_TYPE=uint16_t"
 
