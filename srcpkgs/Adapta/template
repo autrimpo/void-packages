@@ -1,6 +1,6 @@
 # Template file for 'Adapta'
 pkgname=Adapta
-version=3.94.0.106
+version=3.94.0.129
 revision=1
 noarch=yes
 build_style=gnu-configure
@@ -13,7 +13,7 @@ maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="GPL-2"
 homepage=https://github.com/adapta-project/adapta-gtk-theme
 distfiles="https://github.com/adapta-project/adapta-gtk-theme/archive/$version.tar.gz"
-checksum=58138435ce64b4704ca638091499b916bcc97867daee11d9d4144b5ca1243117
+checksum=408ff280bbc6c72f062de7f10fe8ba9025ca6149c754ac3aa8387415ee3b69b5
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh

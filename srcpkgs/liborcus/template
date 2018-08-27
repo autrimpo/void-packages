@@ -1,5 +1,6 @@
 # Template file for 'liborcus'
 pkgname=liborcus
+reverts=0.14.0_1
 version=0.13.4
 revision=2
 build_style=gnu-configure
