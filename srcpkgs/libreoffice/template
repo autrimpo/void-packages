@@ -2,14 +2,11 @@
 # Template file for 'libreoffice'
 pkgname=libreoffice
 version=6.1.0.3
-revision=1
+revision=2
 build_style=meta
 make_build_args="build-nocheck"
 nocross=yes
 
-case "$XBPS_TARGET_MACHINE" in
-	i686*) broken="can't find liborcus" ;;
-esac
 #
 # XXX: mit-krb5-devel nasm firebird3 hamcrest iwyu ogl-math
 # Missing, required libraries are downloaded and built internally
@@ -259,7 +256,7 @@ skip_extraction="
 build_options="java"
 desc_option_java="Enable Java support"
 
-if [ "$XBPS_CHECK_PKGS" ]; then
+if [ -n "$XBPS_CHECK_PKGS" ]; then
 	make_build_args="build"
 fi
 
@@ -279,7 +276,7 @@ case "$XBPS_TARGET_MACHINE" in
 		;;
 esac
 
-CXXFLAGS+=" -DGLM_ENABLE_EXPERIMENTAL"
+CXXFLAGS+=" -DGLM_ENABLE_EXPERIMENTAL -DU_USING_ICU_NAMESPACE=1"
 
 # Move files listed in a <name>_list.txt into $PKGDESTDIR
 _split() {
