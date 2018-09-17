@@ -1,6 +1,6 @@
 # Template file for 'WoeUSB'
 pkgname=WoeUSB
-version=3.2.4
+version=3.2.9
 revision=1
 build_style=gnu-configure
 configure_args="--with-wx-config=wx-config-gtk3"
@@ -12,7 +12,7 @@ maintainer="cr6git <quark6@protonmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/slacka/WoeUSB"
 distfiles="https://github.com/slacka/WoeUSB/archive/v${version}.tar.gz"
-checksum=c18227c18f376030f554043d511882fc99e90c2abea20197538454b19c6a04b7
+checksum=85b338f097f4049c119f75e83e601948451619c5506d50daa4967bdc4ad1eafd
 
 pre_configure() {
 	autoreconf -fi
