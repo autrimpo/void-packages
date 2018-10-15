@@ -1,6 +1,6 @@
 # Template file for 'python-prometheus_client'
 pkgname=python-prometheus_client
-version=0.3.1
+version=0.4.1
 revision=1
 noarch=yes
 wrksrc="prometheus_client-${version}"
@@ -13,7 +13,7 @@ maintainer="Alessio Sergi <al3hex@gmail.com>"
 homepage="https://github.com/prometheus/client_python"
 license="Apache-2.0"
 distfiles="${PYPI_SITE}/p/prometheus_client/prometheus_client-${version}.tar.gz"
-checksum=17bc24c09431644f7c65d7bce9f4237252308070b6395d6d8e87767afe867e24
+checksum=2c0ddba8b9dc5e06de7578a7b25e4becafd6880e6d727bc0a73f8d826c1b0112
 
 python3-prometheus_client_package() {
 	noarch=yes

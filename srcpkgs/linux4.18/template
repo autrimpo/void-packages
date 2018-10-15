@@ -1,7 +1,7 @@
 # Template file for 'linux4.18'
 pkgname=linux4.18
-version=4.18.12
-revision=2
+version=4.18.14
+revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
 short_desc="The Linux kernel and modules (${version%.*} series)"
@@ -9,7 +9,7 @@ maintainer="cr6git <quark6@protonmail.com>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=846a5ad9cbe576f66aeeb188c9bd45d14eee0783aebfc4ea853dac09a7159fc5
+checksum=36c6d1360db9eab40270db6d292c259dd34d3dc06049d64afe3e4cfafb8562d3
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes
