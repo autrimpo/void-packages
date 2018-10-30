@@ -1,16 +1,16 @@
 # Template file for 'clearine'
 pkgname=clearine
-version=0.2
+version=0.3
 revision=1
 build_style=gnu-makefile
 conf_files="/etc/clearine.conf"
 depends="gtk+3 python3-gobject"
 short_desc="GTK3-based logout-window overlay for independent windowmanager"
-maintainer="cr6git <quark6@protonmail.com>"
+maintainer="Orphaned <orphan@voidlinux.eu>"
 homepage="https://github.com/yuune/clearine"
 license="MIT"
 distfiles="https://github.com/yuune/clearine/archive/${version}.tar.gz"
-checksum=efc693928888e40c7e810572bfeb2e7aa6a2007d7070af05555f3757d9adb2e4
+checksum=5972c2f96ac875e3427b48c8bb4d154634274827518937337c9cfe200f073cc4
 noarch=yes
 
 do_build() {

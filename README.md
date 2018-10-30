@@ -12,7 +12,7 @@ or queried through the `xbps-install(1)` and `xbps-query(1)` utilities, respecti
 - GNU bash
 - xbps >= 0.46
 
-`xbps-src` requires an utility to chroot and bind mount existing directories
+`xbps-src` requires a utility to chroot and bind mount existing directories
 into a `masterdir` that is used as its main `chroot` directory. `xbps-src` supports
 multiple utilities to accomplish this task:
 
@@ -180,9 +180,9 @@ any xbps configuration file (see xbps.d(5)) or by explicitly appending them via 
 
 By default **xbps-src** will try to resolve package dependencies in this order:
 
- - If dependency exists in the local repository, use it (`hostdir/binpkgs`).
- - If dependency exists in a remote repository, use it.
- - If dependency exists in a source package, use it.
+ - If a dependency exists in the local repository, use it (`hostdir/binpkgs`).
+ - If a dependency exists in a remote repository, use it.
+ - If a dependency exists in a source package, use it.
 
 It is possible to avoid using remote repositories completely by using the `-N` flag.
 
@@ -238,7 +238,7 @@ First a RSA key must be created with `openssl(1)` or `ssh-keygen(1)`:
 
 or
 
-	$ ssh-keygen -t rsa -b 4096 -f privkey.pem
+	$ ssh-keygen -t rsa -b 4096 -m PEM -f privkey.pem
 
 > Only RSA keys in PEM format are currently accepted by xbps.
 
@@ -415,7 +415,7 @@ Wait until all packages are built and when ready, prepare a new masterdir with t
 
     $ ./xbps-src -m masterdir-x86_64-musl binary-bootstrap x86_64-musl
 
-Your new masterdir is now ready to build natively packages for the musl C library. Try:
+Your new masterdir is now ready to build packages natively for the musl C library. Try:
 
     $ ./xbps-src -m masterdir-x86_64-musl chroot
     $ ldd
