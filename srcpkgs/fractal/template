@@ -1,7 +1,7 @@
 # Template file for 'fractal'
 pkgname=fractal
 version=3.30.0
-revision=1
+revision=2
 build_style=meson
 hostmakedepends="rust cargo pkg-config"
 makedepends="gtk+3-devel glib-devel libressl-devel gstreamer1-devel
@@ -16,6 +16,7 @@ distfiles="https://gitlab.gnome.org/World/fractal/-/archive/$version/$pkgname-$v
 checksum=aa3645ff971525b059fa85da26e4afd5532e348acf6b161b706e2482894f63b3
 
 pre_build() {
+	cargo update --package petgraph --precise 0.4.13
 	export GETTEXT_BIN_DIR=/usr/bin
 	export GETTEXT_LIB_DIR="${XBPS_CROSS_BASE}/usr/lib/gettext"
 	export GETTEXT_INCLUDE_DIR="${XBPS_CROSS_BASE}/usr/include"

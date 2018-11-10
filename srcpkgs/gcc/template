@@ -64,7 +64,8 @@ if [ "$build_option_gnatboot" ]; then
 		;;
 	esac
 fi
-if [ -n "$CHROOT_READY" ]; then
+
+if [ "$CHROOT_READY" ]; then
 	subpackages+=" gcc-fortran libgfortran-devel libgfortran"
 	if [ -z "$CROSS_BUILD" ]; then
 		subpackages+=" gcc-objc gcc-objc++ libobjc-devel libobjc"
@@ -118,9 +119,12 @@ case "$XBPS_TARGET_MACHINE" in
 	x86_64*|i686) subpackages+=" libitm libitm-devel libmpx libmpx-devel";;
 	*) subpackages+=" libitm libitm-devel";;
 esac
-if [ -n "$CROSS_BUILD" ]; then
+if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" cross-${_triplet}"
 	export GFORTRAN_FOR_TARGET=" ${_triplet}-gfortran"
+	if [ "$build_option_ada" ]; then
+		hostmakedepends+=" gcc-ada libada-devel"
+	fi
 fi
 
 post_extract() {
@@ -176,7 +180,7 @@ do_configure() {
 		_langs="c,c++,lto"
 	fi
 
-	if [ -n "$CROSS_BUILD" ]; then
+	if [ "$CROSS_BUILD" ]; then
 		export CC_FOR_TARGET="$CC"
 		export GCC_FOR_TARGET="$CC"
 		export CXX_FOR_TARGET="$CXX"
@@ -430,6 +434,8 @@ libada_package() {
 	short_desc+=" - Ada library"
 	pkg_install() {
 		vmove usr/lib/gcc/${_triplet}/${_majorver}/adalib
+		mv -v ${PKGDESTDIR}/usr/lib/gcc/${_triplet}/${_majorver}/adalib/libgna{rl,t}{,-8}.so \
+			${PKGDESTDIR}/usr/lib
 	}
 }
 libgfortran-devel_package() {

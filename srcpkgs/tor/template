@@ -1,6 +1,6 @@
 # Template file for 'tor'
 pkgname=tor
-version=0.3.4.8
+version=0.3.4.9
 revision=2
 build_style=gnu-configure
 makedepends="libevent-devel libseccomp-devel zlib-devel"
@@ -10,7 +10,8 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD-3-Clause"
 homepage="https://www.torproject.org/"
 distfiles="https://www.torproject.org/dist/tor-${version}.tar.gz"
-checksum=826a4cb2c099a29c7cf91516ffffcfcb5aace7533b8853a8c8bddcfe2bfb1023
+checksum=1a171081f02b9a6ff9e28c0898defb7670e5bbb3bdbcaddfcf4e4304aedd164a
+
 conf_files="/etc/tor/torrc"
 system_accounts="tor"
 tor_homedir=/var/lib/tor

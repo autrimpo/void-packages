@@ -1,6 +1,6 @@
 # Template file for 'jdupes'
 pkgname=jdupes
-version=1.10.4
+version=1.11.1
 revision=1
 build_style=gnu-makefile
 make_build_args="ENABLE_BTRFS=1"
@@ -10,7 +10,7 @@ license="MIT"
 homepage="https://github.com/jbruchon/jdupes"
 changelog="https://raw.githubusercontent.com/jbruchon/jdupes/master/CHANGES"
 distfiles="https://github.com/jbruchon/jdupes/archive/v${version}.tar.gz"
-checksum=1a733878b244fbc79bae5359a65d50970b9fba8e499264067e9c153011d440c0
+checksum=e71aef9a71ad038092416de48acbe57ac2f46ff13b710991a151caab3de4f7c8
 
 post_install() {
 	vlicense LICENSE
