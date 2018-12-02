@@ -1,6 +1,6 @@
 # Template file for 'aminal'
 pkgname=aminal
-version=0.7.5
+version=0.7.8
 revision=1
 build_style=go
 go_import_path=github.com/liamg/aminal
@@ -11,4 +11,4 @@ maintainer="SolitudeSF <solitudesf@protonmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/liamg/aminal"
 distfiles="${homepage}/archive/v${version}.tar.gz"
-checksum=3507719405c8b17004fc0723af4c9563737255ea6c5395faa2f5af929d505143
+checksum=d9bf5d5d4342a5c9d8996f8f80d0e5b8e55ab264520670e5a643f9b386be3c67
