@@ -1,6 +1,6 @@
 # Template file for 'SLADE'
 pkgname=SLADE
-version=3.1.2
+version=3.1.4
 revision=1
 build_style=cmake
 hostmakedepends="pkg-config p7zip"
@@ -12,7 +12,7 @@ license="GPL-2.0-or-later"
 homepage="https://github.com/sirjuddington/SLADE"
 changelog="https://github.com/sirjuddington/SLADE/releases/tag/${version}"
 distfiles="https://github.com/sirjuddington/SLADE/archive/${version}.tar.gz"
-checksum=213d8ac065e3ec06e7e7df39695a58296f7ca435c10244389b21d9f91ed49724
+checksum=ee3acaaf27292c90a46eea509c3a56564e1339b3080a9648dc6edf5b731be57e
 
 if [ -z "$CROSS_BUILD" ]; then
 	configure_args+=" -DwxWidgets_CONFIG_EXECUTABLE=/usr/bin/wx-config-gtk3"

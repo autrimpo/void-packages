@@ -1,9 +1,12 @@
 # Template file for 'calibre'
 pkgname=calibre
-version=3.32.0
-revision=3
+version=3.36.0
+revision=1
+build_style=python2-module
+pycompile_dirs="/usr/lib/calibre/"
+make_build_args="gui"
 hostmakedepends="qt5-qmake python-devel pkg-config
- python-dateutil python-lxml python-Pillow python-msgpack
+ python-dateutil python-lxml python-Pillow python-msgpack python-enum34
  python-PyQt5-webkit python-apsw python-cssutils python-CherryPy"
 makedepends="python-PyQt5-devel glib-devel libwmf-devel
  fontconfig-devel libmagick-devel libressl-devel icu-devel sqlite-devel
@@ -14,17 +17,15 @@ depends="python-six python-dateutil python-cssutils python-CherryPy
  python-PyQt5-webkit python-psutil python-dbus python-netifaces
  python-cssselect python-apsw qt5-webkit qt5-svg python-chardet
  python-Pygments python-mechanize python-lxml poppler-utils
- python-regex python-html5-parser python-msgpack
+ python-regex python-html5-parser python-msgpack python-enum34
  shared-mime-info desktop-file-utils gtk-update-icon-cache optipng"
 short_desc="Ebook management application"
-maintainer="Andrea Brancaleoni <abc@pompel.me>"
-license="GPL-3"
+maintainer="bra1nwave <brainwave@openmailbox.org>"
+license="GPL-3.0-only"
 homepage="https://calibre-ebook.com"
 distfiles="https://download.calibre-ebook.com/${version}/calibre-${version}.tar.xz"
-checksum=57254b147d8f8caf16f774f090266e112281c19bf7bc4170e65d22ab9b58d8ac
-
+checksum=68cd787db3eafc2907e2e62b6bf895836c880f6bc91686de1b6ace9dc4226e39
 nocross=yes
-pycompile_dirs="/usr/lib/calibre/"
 
 do_configure() {
 	# Remove unneeded files and libs
@@ -40,12 +41,10 @@ do_configure() {
 		-e "s/^Name=calibre/Name=Calibre/g" \
 		-i  src/calibre/linux.py
 }
-do_build() {
-	python2 setup.py build gui
-}
+
 do_install() {
 	vinstall ${FILESDIR}/calibre.desktop 644 usr/share/applications
 	vinstall ${FILESDIR}/calibre-viewer.desktop 644 usr/share/applications
 	python2 setup.py \
-		install --prefix=/usr --staging-root=${DESTDIR}/usr ${make_install_args}
+		install --prefix=/usr --staging-root=${DESTDIR}/usr
 }

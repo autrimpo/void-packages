@@ -1,18 +1,18 @@
 # Template file for 'vault'
 pkgname=vault
-version=0.11.5
+version=1.0.1
 revision=1
 build_style=go
 go_import_path="github.com/hashicorp/${pkgname}"
+conf_files="/etc/vault.hcl"
+make_dirs="/var/lib/vault 0700 _vault _vault"
 short_desc="Tool for securely accessing secrets"
 maintainer="iaroki <iaroki@protonmail.com>"
 license="MPL-2.0"
 homepage="https://www.vaultproject.io/"
 distfiles="https://github.com/hashicorp/${pkgname}/archive/v${version}.tar.gz"
-checksum=7f5e6f87c1f9505f814d45cdaa2ef2cc6a49129fa51f71498875d47b0a4a2ef2
+checksum=1c231d2b0dd277a5e7ff68133ad11b43e6a5820a5b2a7c2da61c03bd275780ca
 system_accounts="_vault"
-conf_files="/etc/vault.hcl"
-make_dirs="/var/lib/vault 0700 _vault _vault"
 
 post_install() {
 	vinstall ${FILESDIR}/vault.hcl 644 etc/

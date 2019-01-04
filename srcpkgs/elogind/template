@@ -1,6 +1,6 @@
 # Template file for 'elogind'
 pkgname=elogind
-version=239.2
+version=239.3
 revision=1
 build_style=meson
 configure_args="-Dcgroup-controller=elogind -Dhalt-path=/usr/bin/halt
@@ -16,7 +16,7 @@ maintainer="Enno Boland <gottox@voidlinux.eu>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/elogind/elogind"
 distfiles="https://github.com/${pkgname}/${pkgname}/archive/v${version}.tar.gz"
-checksum=afbe4f574b299273041d5e3542d764145e9035642e800ea4697d31f44923f2e1
+checksum=fde2791134ec14f17f7a5f0257c7337e4976826ce6ce86da7eedae54bccf2945
 conf_files="/etc/elogind/logind.conf"
 
 pre_check() {
@@ -44,8 +44,8 @@ post_install() {
 	vinstall ./src/systemd/sd-id128.h 644 usr/include
 	vinstall ./src/systemd/_sd-common.h 644 usr/include
 	vinstall $FILESDIR/elogind.wrapper 755 usr/libexec/elogind
-	vmkdir etc/dracut.conf.d
-	echo "install_items+=\" /usr/libexec/elogind/elogind-uaccess-command \"" >> ${DESTDIR}/etc/dracut.conf.d/elogind.conf
+	vmkdir usr/lib/dracut/dracut.conf.d
+	echo "install_items+=\" /usr/libexec/elogind/elogind-uaccess-command \"" >> ${DESTDIR}/usr/lib/dracut/dracut.conf.d/elogind.conf
 }
 
 elogind-devel_package() {
