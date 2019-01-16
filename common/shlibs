@@ -122,6 +122,7 @@ libGLESv2.so.2 libGLES-1.0_1
 libEGL.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so opera-55.0.2994.37_2
+libGLESv2.so discord-0.0.7_1
 libbrcmEGL.so rpi-userland-20180103_2
 libbrcmGLESv2.so rpi-userland-20180103_2
 libbrcmOpenVG.so rpi-userland-20180103_2
@@ -668,7 +669,7 @@ libboost_stacktrace_addr2line.so.1.69.0 libboost_stacktrace_addr2line1.69-1.69.0
 libboost_stacktrace_basic.so.1.69.0 libboost_stacktrace_basic1.69-1.69.0_1<1.70.0
 libboost_python27.so.1.69.0 boost-python1.69-1.69.0_1<1.70.0
 libboost_python36.so.1.69.0 boost-python3-1.69-1.69.0_1<1.70.0
-libexempi.so.3 exempi-2.1.1_1
+libexempi.so.8 exempi-2.5.0_1
 libatasmart.so.4 libatasmart-0.17_1
 libsgutils2.so.2 libsgutils-1.42_1
 liblvm2app.so.2.2 liblvm2app-2.02.54_1
@@ -1547,7 +1548,6 @@ libfreerdp-utils.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-codec.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-gdi.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-cache.so.1.0 libfreerdp-1.0.2_2
-libcppunit-1.12.so.1 libcppunit-1.12.1_1
 libcppunit-1.14.so.0 libcppunit-1.14.0_1
 libcalc.so.2.12.7.1 libcalc-2.12.7.1_1
 libcustcalc.so.2.12.7.1 libcalc-2.12.7.1_1
@@ -1769,7 +1769,7 @@ libnetfilter_acct.so.1 libnetfilter_acct-1.0.2_1
 libnetfilter_conntrack.so.3 libnetfilter_conntrack-1.0.4_1
 libmsgpack.so.4 msgpack-1.1.0_1
 libmsgpackc.so.2 msgpack-1.1.0_1
-libewf.so.2 libewf-20140608_1
+libewf.so.3 libewf-20171104_1
 libcupsfilters.so.1 libcups-filters-1.0.67_3
 libfontembed.so.1 libcups-filters-1.17.5_1
 libjemalloc.so.2 jemalloc-4.0.0_1
@@ -2696,7 +2696,7 @@ libKPropertyWidgets3.so.4 kproperty-3.1.0_1
 libKPropertyCore3.so.4 kproperty-3.1.0_1
 libKReport3.so.4 kreport-3.1.0_1
 libbotan-2.so.8 botan-2.8.0_1
-libswipl.so.7.6 swi-prolog-7.6.0_1
+libswipl.so.8 swi-prolog-8.0.0_1
 libpcre2-16.so.0 libpcre2-10.22_1
 libpcre2-32.so.0 libpcre2-10.22_1
 libpcre2-8.so.0 libpcre2-10.22_1
@@ -3058,6 +3058,7 @@ libgnuradio-vocoder-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-fcd-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-wavelet-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-wxgui-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-uhd-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_3
 libgnuradio-osmosdr-0.1.4.so.0.0.0 gnuradio-osmosdr-0.1.4_1
 libflann_cpp.so.1.9 flann-1.9.1_1
 libflann.so.1.9 flann-1.9.1_1
@@ -3242,9 +3243,9 @@ libspatialindex.so.4 libspatialindex-1.8.5_1
 libspatialindex_c.so.4 libspatialindex-1.8.5_1
 libpapi.so.5 papi-5.6.0_1
 libpfm.so.4 papi-5.6.0_1
-libfifechan.so.0.1.4 fifechan-0.1.4_1
-libfifechan_sdl.so.0.1.4 fifechan-0.1.4_1
-libfifechan_opengl.so.0.1.4 fifechan-0.1.4_1
+libfifechan.so.0.1.5 fifechan-0.1.5_1
+libfifechan_sdl.so.0.1.5 fifechan-0.1.5_1
+libfifechan_opengl.so.0.1.5 fifechan-0.1.5_1
 libpolyclipping.so.22 clipper-6.4.2_1
 libSoapySDR.so.0.7 SoapySDR-0.7.0_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
@@ -3381,3 +3382,11 @@ libbroker.so.0 bro-2.6.1_1
 libcaf_core.so.0.16.2 bro-2.6.1_1
 libcaf_openssl.so.0.16.2 bro-2.6.1_1
 libllhttp.so.1 llhttp-1.0.1_1
+libpinyin.so.13 libpinyin-2.2.1_1
+libuhd.so.3 uhd-3.13.0.2_1
+libeditline.so.1 editline-1.16.0_1
+libgnuradio-rds-3.7.0git.so.0.0.0 gnuradio-rds-1.1.0_1
+libgnuradio-nrsc5-1.0.0git.so.0.0.0 gnuradio-nrsc5-1.0.0_1
+libgaminggear.so.0 libgaminggear-0.15.1_1
+libgaminggearfx.so.0 libgaminggear-0.15.1_1
+libgaminggearwidget.so.0 libgaminggear-0.15.1_1
