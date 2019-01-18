@@ -200,7 +200,7 @@ libcap.so.2 libcap-2.16_1
 liblzma.so.5 liblzma-5.0.0_1
 libuuid.so.1 libuuid-2.18_1
 libblkid.so.1 libblkid-2.18_1
-libidn.so.11 libidn-1.10_1
+libidn.so.12 libidn-1.35_1
 libusb-1.0.so.0 libusb-1.0.0_1
 libusb-0.1.so.4 libusb-compat-0.1.0_1
 libpci.so.3 pciutils-3.5.0_1
@@ -734,6 +734,7 @@ libxfce4ui-2.so.0 libxfce4ui-4.12.1_2
 libxfce4kbd-private-2.so.0 libxfce4ui-4.9.2_1
 libxfce4kbd-private-3.so.0 libxfce4ui-4.12.1_2
 libxml++-2.6.so.2 libxml++-2.32.0_1
+libxml++-3.0.so.1 libxml++3.0-3.0.1_1
 libftgl.so.2 ftgl-2.1.2_1
 libGLEW.so.2.1 glew-2.1.0_1
 libsndfile.so.1 libsndfile-1.0.20_1
@@ -1892,7 +1893,7 @@ libQt5EglFsKmsSupport.so.5 qt5-5.7.1_1
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
 libQt5TextToSpeech.so.5 qt5-speech-5.8.0_1
-libx265.so.160 x265-2.8_1
+libx265.so.165 x265-2.9_1
 libQt5Xdg.so.3 libqtxdg-3.1.0_1
 libQt5XdgIconLoader.so.3 libqtxdg-3.1.0_1
 libqwt.so.6 qwt-6.1.3_1
@@ -3390,3 +3391,5 @@ libgnuradio-nrsc5-1.0.0git.so.0.0.0 gnuradio-nrsc5-1.0.0_1
 libgaminggear.so.0 libgaminggear-0.15.1_1
 libgaminggearfx.so.0 libgaminggear-0.15.1_1
 libgaminggearwidget.so.0 libgaminggear-0.15.1_1
+libopkg.so.1 libopkg-0.4.0_1
+libQMatrixClient.so.0.4 libqmatrixclient-0.4.2.1_1
