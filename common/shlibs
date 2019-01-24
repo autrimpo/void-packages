@@ -16,7 +16,7 @@
 # PLEASE NOTE: when multiple packages provide the same SONAME, the first
 # one (order top->bottom) is preferred over the next ones.
 #
-libc.so musl-0.9.9_1
+libc.so musl-1.1.21_1
 libc.so.6 glibc-2.28_1
 libm.so.6 glibc-2.28_1
 libpthread.so.0 glibc-2.28_1
@@ -1013,7 +1013,6 @@ libLLVM-6.0.so libllvm6.0-6.0.0_1
 libLLVM-7.so libllvm7-7.0.0_1
 libisofs.so.6 libisofs-0.6.24_1
 libmpack.so.0 libmpack-1.0.5_1
-libv8.so.3.24 libv8-3.24.35.22_1
 libGeoIP.so.1 libgeoip-1.4.8_1
 libnilfs.so.0 libnilfs-2.1.0_1
 libnilfsgc.so.0 libnilfs-2.1.0_1
