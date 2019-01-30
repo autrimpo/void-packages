@@ -91,6 +91,12 @@ show-deps <pkgname>
 show-files <pkgname>
     Show files installed by <pkgname>. Package must be installed into destdir.
 
+show-hostmakedepends <pkgname>
+    Show required host build dependencies for <pkgname>.
+
+show-makedepends <pkgname>
+    Show required target build dependencies for <pkgname>.
+
 show-options <pkgname>
     Show available build options by <pkgname>.
 
@@ -514,6 +520,7 @@ if [ -n "$IN_CHROOT" ]; then
     readonly XBPS_CROSSPFDIR=$XBPS_COMMONDIR/cross-profiles
     readonly XBPS_BUILDSTYLEDIR=$XBPS_COMMONDIR/build-style
     readonly XBPS_LIBEXECDIR=$XBPS_COMMONDIR/xbps-src/libexec
+    readonly XBPS_BUILDHELPERDIR=$XBPS_COMMONDIR/build-helper
 else
     readonly XBPS_UHELPER_CMD="xbps-uhelper -r $XBPS_MASTERDIR"
     readonly XBPS_INSTALL_CMD="xbps-install -C /dev/null -c $XBPS_HOSTDIR/repocache --repository=$XBPS_REPOSITORY -r $XBPS_MASTERDIR"
@@ -530,6 +537,7 @@ else
     readonly XBPS_CROSSPFDIR=$XBPS_COMMONDIR/cross-profiles
     readonly XBPS_BUILDSTYLEDIR=$XBPS_COMMONDIR/build-style
     readonly XBPS_LIBEXECDIR=$XBPS_COMMONDIR/xbps-src/libexec
+    readonly XBPS_BUILDHELPERDIR=$XBPS_COMMONDIR/build-helper
 fi
 readonly XBPS_FETCH_CMD="xbps-uhelper fetch"
 readonly XBPS_DIGEST_CMD="xbps-uhelper digest"
@@ -581,7 +589,7 @@ export XBPS_SHUTILSDIR XBPS_CROSSPFDIR XBPS_TRIGGERSDIR \
     XBPS_KEEP_ALL XBPS_HOSTDIR XBPS_MASTERDIR XBPS_SRC_VERSION \
     XBPS_DESTDIR XBPS_MACHINE XBPS_TEMP_MASTERDIR XBPS_BINPKG_EXISTS \
     XBPS_LIBEXECDIR XBPS_DISTDIR XBPS_DISTFILES_MIRROR XBPS_ALLOW_RESTRICTED \
-    XBPS_USE_GIT_COMMIT_DATE XBPS_PKG_COMPTYPE
+    XBPS_USE_GIT_COMMIT_DATE XBPS_PKG_COMPTYPE XBPS_BUILDHELPERDIR
 
 for i in REPOSITORY DESTDIR BUILDDIR SRCDISTDIR; do
     eval val="\$XBPS_$i"
@@ -747,6 +755,14 @@ case "$XBPS_TARGET" in
     show-build-deps)
         read_pkg ignore-problems
         show_pkg_build_deps
+        ;;
+    show-hostmakedepends)
+        read_pkg ignore-problems
+        show_pkg_hostmakedepends
+        ;;
+    show-makedepends)
+        read_pkg ignore-problems
+        show_pkg_makedepends
         ;;
     show-pkg-var)
         read_pkg ignore-problems

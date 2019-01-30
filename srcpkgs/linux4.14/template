@@ -1,6 +1,6 @@
 # Template file for 'linux4.14'
 pkgname=linux4.14
-version=4.14.95
+version=4.14.96
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
@@ -9,7 +9,7 @@ homepage="http://www.kernel.org"
 license="GPL-2.0-only"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=ce6729e3fca312520e3cb4f27993852dbb019d94c59c0b35cedab571f9cb58e4
+checksum=110daeae1a416b7e0ec8dce5e86d67552deeb4567f696c3869389be239f0ecb5
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes
@@ -23,6 +23,11 @@ hostmakedepends="bc elfutils-devel kmod libressl-devel perl uboot-mkimage gmp-de
 _kernver="${version}_${revision}"
 triggers="kernel-hooks"
 kernel_hooks_version="${_kernver}"
+
+
+case "$XBPS_TARGET_MACHINE" in
+	*-musl) broken="https://build.voidlinux.org/builders/x86_64-musl_builder/builds/17191/steps/shell_3/logs/stdio";;
+esac
 
 # These files could be modified when an external module is built.
 mutable_files="

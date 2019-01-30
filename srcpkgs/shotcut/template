@@ -1,6 +1,6 @@
 # Template file for 'shotcut'
 pkgname=shotcut
-version=19.01.19
+version=19.01.27
 revision=1
 build_style=qmake
 configure_args="SHOTCUT_VERSION=VOID-$version DEFINES+=SHOTCUT_NOUPGRADE"
@@ -15,7 +15,7 @@ maintainer="John <johnz@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://www.shotcut.org"
 distfiles="https://github.com/mltframework/shotcut/archive/v${version}.tar.gz"
-checksum=78b2dc8014022dbce1027519f719e85f1030511eece35daada752e8c9f0f95ec
+checksum=4e621615b272044ce3decaa4bb5ef7ebb9cef3932161422fedc9a77b474de240
 
 CXXFLAGS="-DHAVE_LOCALE_H=1"
 
