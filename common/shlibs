@@ -124,6 +124,7 @@ libEGL.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so opera-55.0.2994.37_2
 libGLESv2.so discord-0.0.7_1
+libGLESv2.so riot-desktop-0.17.9_2
 libbrcmEGL.so rpi-userland-20180103_2
 libbrcmGLESv2.so rpi-userland-20180103_2
 libbrcmOpenVG.so rpi-userland-20180103_2
@@ -1230,7 +1231,7 @@ librlog.so.5 librlog-1.4_1
 libtinyxml.so.0 tinyxml-2.6.2_1
 libtinyxml2.so.7 tinyxml2-7.0.0_1
 libbluray.so.2 libbluray-1.0.0_1
-libnfs.so.12 libnfs-3.0.0_1
+libnfs.so.13 libnfs-4.0.0_1
 libzip.so.5 libzip-1.2_1
 libluajit-5.1.so.2 LuaJIT-2.0.0_1
 libOSMesa.so.8 libOSMesa-9.1_1
@@ -3397,3 +3398,4 @@ libsnore-qt5.so.0.7 snorenotify-0.7.0_1
 libsnoresettings-qt5.so.0.7 snorenotify-0.7.0_1
 libTECkit.so.0 libteckit-2.5.8_1
 libTECkit_Compiler.so.0 libteckit-2.5.8_1
+libwf-config.so wf-config-0.1_1
